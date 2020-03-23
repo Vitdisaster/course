@@ -19,4 +19,15 @@ try:
     answer = driver.find_element_by_id("answer")
     answer.send_keys(z)
     print("Вставлено")
-    
+    checkbox = driver.find_element_by_id("robotCheckbox")
+    checkbox.click()
+    print("Выбрано1")
+    radiobutton = driver.find_element_by_id("robotsRule")
+    radiobutton.click()
+    print("Выбрано2")   
+    button = driver.find_element_by_css_selector("button.btn")
+    button.click()
+	
+finally:
+	time.sleep(10)
+	driver.quit()
